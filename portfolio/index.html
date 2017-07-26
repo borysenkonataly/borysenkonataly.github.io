@@ -317,7 +317,18 @@
 
 	</footer>
 	
-	<link rel="stylesheet" property="stylesheet" href="css/main.min.css">
-	<script src="js/scripts.min.js"></script>
+	<script>
+		var script = document.createElement('script');
+		var link = document.createElement('link');
+		/*Подключаем стили*/
+		document.getElementsByTagName('head')[0].appendChild(link);
+		link.setAttribute('rel','stylesheet');
+		link.setAttribute('type','text/css');
+		link.setAttribute('href','css/main.min.css');
+		/*Подключаем скрипт*/
+		document.getElementsByTagName('head')[0].appendChild(script);
+		script.type = 'text/javascript';
+		script.src= 'js/scripts.min.js';
+	</script>
 </body>
 </html>
